@@ -1,8 +1,12 @@
 # StaticListview-kotlin
 android static listview write by kotlin
 
+
+![](https://github.com/liufsd/StaticListview-kotlin/blob/master/Screen_Shot.png)
+
 ## Features
-*Easy create list for some static listview (recyclerview)
+
+* Easy create list for some static listview (recyclerview)
   
 ## Usage
 
