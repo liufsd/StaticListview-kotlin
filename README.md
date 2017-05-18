@@ -9,23 +9,22 @@ android static listview write by kotlin
 
  1. Gradle 
  
- ```
-  compile 'com.sk.mobile.view:staticlistview:1.0.0'
+```groovy
+    compile 'com.sk.mobile.view:staticlistview:1.0.0'
  ```
 
- 
  2. XML
  
-    ```
+```groovy
       <com.sk.mobile.view.staticlistview.StaticListView
             android:id="@+id/demo_static_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    ```
+            android:layout_height="match_parent" />  
+ ```
     
  3. setup data
  
-    ```
+```groovy
     val staticListView: StaticListView = findViewById(R.id.demo_static_list) as StaticListView
         staticListView.config(Item("google", action = {
             showToast(it?.title)
@@ -42,13 +41,12 @@ android static listview write by kotlin
                 , Item("kotlin", action = {
             showToast(it?.title)
         }))
- ```
- 
- 
- ![](https://github.com/liufsd/StaticListview-kotlin/blob/master/Screen_Shot.png)
+```
+  
+  ![](https://github.com/liufsd/StaticListview-kotlin/blob/master/Screen_Shot.png)
 
 
-## TODO
+## TODO=
 
 - [x] support easy create list 
 - [x] support title, subtitle, action 
