@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
@@ -27,6 +28,23 @@ android {
         exclude 'META-INF/library-compileReleaseKotlin.kotlin_module'
         exclude 'META-INF/library_release.kotlin_module'
     }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+tasks.withType(Javadoc) {
+    options.addBooleanOption('Xdoclint:none', true)
+}
+
+publish {
+    userOrg = '79144876'      //bintray注册的用户名
+    groupId = 'com.sk.mobile.view'         //compile引用时的第1部分groupId
+    artifactId = 'staticlistview'     //compile引用时的第2部分项目名
+    publishVersion = '1.0.0'    //compile引用时的第3部分版本号
+    desc = 'static listview write by kotlin'
+    website = 'https://github.com/liufsd/StaticListview-kotlin'
 }
 
 dependencies {
@@ -41,4 +59,3 @@ dependencies {
 }
 
 
-apply from: 'bintray.gradle'
