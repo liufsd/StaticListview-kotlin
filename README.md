@@ -35,6 +35,7 @@ android static listview write by kotlin
 - [x] support easy create list 
 - [x] support title, subtitle, action 
 - [x] Better UI
+- [ ] support gradle dependencies
 - [ ] DSL
 
  License
